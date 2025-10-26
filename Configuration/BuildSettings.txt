@@ -1,0 +1,290 @@
+# Unity Build Settings Template
+# Use these settings as a reference when configuring your Unity project builds
+
+## General Build Settings
+
+### Scenes in Build
+- Add all scenes to build in correct order
+- Main menu scene first (index 0)
+- Gameplay scenes in logical order
+- Loading screens if applicable
+- Credits/End scenes last
+
+### Platform Settings
+- Configure for target platform
+- Set appropriate compression
+- Configure scripting define symbols
+- Set development build options
+
+## PC Build Settings (Windows/Mac/Linux)
+
+### Player Settings
+- Company Name: Your Company Name
+- Product Name: Your Game Name
+- Version: 1.0.0
+- Bundle Identifier: com.yourcompany.yourgame
+
+### Resolution and Presentation
+- Default Screen Width: 1920
+- Default Screen Height: 1080
+- Default Is Full Screen: false
+- Default Is Native Resolution: true
+- Run In Background: true
+- Capture Single Screen: false
+- Use DXGI Flip Model Swapchain: true (Windows)
+
+### Icon
+- Override for PC, Mac & Linux Standalone: true
+- Icon sizes: 16x16, 32x32, 48x48, 64x64, 128x128, 256x256, 512x512
+
+### Splash Screen
+- Show Splash Screen: true
+- Draw Mode: Unity Logo Below
+- Logo Style: Light on Dark
+- Animation: Static
+- Background Color: Black
+
+### Other Settings
+- Scripting Backend: IL2CPP
+- Api Compatibility Level: .NET Standard 2.1
+- Allow downloads over HTTP: false
+- Use incremental GC: true
+- Strip Engine Code: true
+
+### Publishing Settings
+- Create Visual Studio Solution: true
+- Scripting Define Symbols: 
+  - UNITY_PC
+  - UNITY_STANDALONE
+  - ENABLE_LOGGING
+
+## Mobile Build Settings (iOS/Android)
+
+### Player Settings
+- Company Name: Your Company Name
+- Product Name: Your Game Name Mobile
+- Version: 1.0.0
+- Bundle Identifier: com.yourcompany.yourgame.mobile
+
+### Resolution and Presentation
+- Default Screen Width: 1080
+- Default Screen Height: 1920
+- Default Is Full Screen: true
+- Default Is Native Resolution: true
+- Run In Background: false
+- Default Screen Orientation: Portrait (or Landscape)
+
+### Icon
+- Override for iOS: true
+- Override for Android: true
+- iOS Icon sizes: 29x29, 40x40, 50x50, 57x57, 60x60, 72x72, 76x76, 80x80, 87x87, 100x100, 114x114, 120x120, 144x144, 152x152, 167x167, 180x180, 1024x1024
+- Android Icon sizes: 36x36, 48x48, 72x72, 96x96, 144x144, 192x192, 512x512
+
+### Splash Screen
+- Show Splash Screen: true
+- Draw Mode: Unity Logo Below
+- Logo Style: Light on Dark
+- Animation: Static
+- Background Color: Black
+
+### Other Settings
+- Scripting Backend: IL2CPP
+- Api Compatibility Level: .NET Standard 2.1
+- Target Device: Any iOS Device / Any Android Device
+- Target SDK: Latest installed
+- Minimum API Level: Android 7.0 (API level 24)
+- Target API Level: Latest installed
+
+### iOS Specific Settings
+- Camera Usage Description: This app uses the camera for AR features
+- Location Usage Description: This app uses location for gameplay features
+- Microphone Usage Description: This app uses the microphone for voice chat
+- Target iOS Version: 12.0 or later
+- Architecture: ARM64
+- Scripting Backend: IL2CPP
+- Managed Stripping Level: High
+
+### Android Specific Settings
+- Package Name: com.yourcompany.yourgame.mobile
+- Version Code: 1
+- Version Name: 1.0.0
+- Minimum API Level: 24
+- Target API Level: 33
+- Scripting Backend: IL2CPP
+- Target Architectures: ARM64
+- Managed Stripping Level: High
+- Use Custom Keystore: true
+- Keystore Path: (set your keystore path)
+- Keystore Password: (set your keystore password)
+- Key Alias: (set your key alias)
+- Key Password: (set your key password)
+
+### Publishing Settings
+- Scripting Define Symbols:
+  - UNITY_MOBILE
+  - UNITY_IOS (for iOS builds)
+  - UNITY_ANDROID (for Android builds)
+  - ENABLE_LOGGING
+
+## Console Build Settings (PlayStation/Xbox/Nintendo Switch)
+
+### Player Settings
+- Company Name: Your Company Name
+- Product Name: Your Game Name Console
+- Version: 1.0.0
+- Bundle Identifier: com.yourcompany.yourgame.console
+
+### Resolution and Presentation
+- Default Screen Width: 1920
+- Default Screen Height: 1080
+- Default Is Full Screen: true
+- Default Is Native Resolution: true
+- Run In Background: false
+
+### Icon
+- Override for target console: true
+- Set appropriate icon sizes for target console
+
+### Other Settings
+- Scripting Backend: IL2CPP
+- Api Compatibility Level: .NET Standard 2.1
+- Target Device: Target console
+- Managed Stripping Level: High
+
+### Console Specific Settings
+- Configure platform-specific settings
+- Set appropriate performance targets
+- Configure controller input
+- Set platform-specific features
+
+### Publishing Settings
+- Scripting Define Symbols:
+  - UNITY_CONSOLE
+  - UNITY_PS4 (for PlayStation builds)
+  - UNITY_XBOXONE (for Xbox builds)
+  - UNITY_SWITCH (for Nintendo Switch builds)
+  - ENABLE_LOGGING
+
+## WebGL Build Settings
+
+### Player Settings
+- Company Name: Your Company Name
+- Product Name: Your Game Name Web
+- Version: 1.0.0
+- Bundle Identifier: com.yourcompany.yourgame.web
+
+### Resolution and Presentation
+- Default Screen Width: 1920
+- Default Screen Height: 1080
+- Default Is Full Screen: false
+- Default Is Native Resolution: true
+- Run In Background: true
+
+### Icon
+- Override for WebGL: true
+- Icon sizes: 16x16, 32x32, 48x48, 64x64, 128x128, 256x256, 512x512
+
+### Other Settings
+- Scripting Backend: IL2CPP
+- Api Compatibility Level: .NET Standard 2.1
+- WebGL Template: Default
+- Compression Format: Gzip
+- Data Caching: true
+- Name Files As Hashes: true
+- Decompression Fallback: true
+
+### Publishing Settings
+- Scripting Define Symbols:
+  - UNITY_WEBGL
+  - ENABLE_LOGGING
+
+## Build Optimization Settings
+
+### General Optimization
+- Development Build: false (for release builds)
+- Script Debugging: false (for release builds)
+- Deep Profiling Support: false (for release builds)
+- Scripts Only Build: false (for release builds)
+- Build With Deep Profiling: false (for release builds)
+
+### Compression Settings
+- PC: LZ4HC
+- Mobile: LZ4HC
+- Console: LZ4HC
+- WebGL: Gzip
+
+### Stripping Settings
+- Managed Stripping Level: High (for release builds)
+- Strip Engine Code: true (for release builds)
+- Use incremental GC: true
+
+### Scripting Define Symbols by Platform
+- PC: UNITY_PC, UNITY_STANDALONE, ENABLE_LOGGING
+- Mobile: UNITY_MOBILE, UNITY_IOS/UNITY_ANDROID, ENABLE_LOGGING
+- Console: UNITY_CONSOLE, UNITY_PS4/UNITY_XBOXONE/UNITY_SWITCH, ENABLE_LOGGING
+- WebGL: UNITY_WEBGL, ENABLE_LOGGING
+
+## Build Validation Checklist
+
+### Pre-Build
+- [ ] All scenes added to build
+- [ ] Correct scene order
+- [ ] Platform-specific settings configured
+- [ ] Icons set for target platform
+- [ ] Splash screen configured
+- [ ] Scripting define symbols set
+- [ ] Compression settings optimized
+- [ ] Stripping settings appropriate
+
+### Post-Build
+- [ ] Build size within acceptable limits
+- [ ] All required files included
+- [ ] Platform-specific requirements met
+- [ ] Performance targets met
+- [ ] Memory usage acceptable
+- [ ] Loading times acceptable
+
+## Build Automation
+
+### Command Line Build
+- Use Unity command line for automated builds
+- Set appropriate build targets
+- Configure build parameters
+- Set up build validation
+- Configure build reporting
+
+### CI/CD Integration
+- Set up continuous integration
+- Configure automated testing
+- Set up build validation
+- Configure deployment pipelines
+- Set up build notifications
+
+## Platform-Specific Considerations
+
+### PC
+- Consider different screen resolutions
+- Support for different input methods
+- Performance scaling options
+- Graphics quality settings
+
+### Mobile
+- Battery life optimization
+- Touch input support
+- Performance on low-end devices
+- Memory constraints
+- Network connectivity
+
+### Console
+- Platform-specific features
+- Controller input
+- Performance targets
+- Platform certification requirements
+- Update mechanisms
+
+### WebGL
+- Browser compatibility
+- Performance limitations
+- Memory constraints
+- Loading times
+- Network requirements

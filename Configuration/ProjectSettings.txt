@@ -1,0 +1,240 @@
+# Unity Project Settings Template
+# Copy these settings to your Unity project's ProjectSettings folder
+
+## Player Settings Recommendations
+
+### Company Name
+- Set a consistent company name for all builds
+
+### Product Name
+- Use descriptive names for different platforms
+- Example: "MyGame" for PC, "MyGame Mobile" for mobile
+
+### Version
+- Use semantic versioning (e.g., 1.0.0)
+- Increment appropriately for releases
+
+### Icon
+- Create platform-specific icons
+- Recommended sizes:
+  - PC: 256x256, 512x512
+  - Mobile: 1024x1024 (iOS), 512x512 (Android)
+  - Console: Platform-specific requirements
+
+### Resolution and Presentation
+- Set default screen width/height
+- Enable/disable fullscreen mode as needed
+- Set default screen orientation for mobile
+
+### Splash Screen
+- Configure splash screen settings
+- Set logo and background
+- Configure animation settings
+
+### Other Settings
+- Set bundle identifier (com.yourcompany.yourgame)
+- Configure supported platforms
+- Set scripting backend (IL2CPP recommended for mobile)
+- Configure API compatibility level
+
+## Quality Settings Recommendations
+
+### Quality Levels
+- Create custom quality levels for different platforms
+- PC: High, Medium, Low
+- Mobile: High, Medium, Low, Very Low
+- Console: High, Medium
+
+### Texture Quality
+- Set appropriate texture quality for each level
+- Consider memory constraints on mobile
+
+### Anti Aliasing
+- Enable MSAA for PC builds
+- Use FXAA for mobile if needed
+
+### Shadow Settings
+- Configure shadow resolution and distance
+- Use lower settings for mobile
+
+### LOD Bias
+- Adjust LOD bias for different quality levels
+- Higher values for lower quality levels
+
+## Physics Settings
+
+### 2D Physics
+- Set gravity (default: -9.81)
+- Configure default material
+- Set velocity iterations and position iterations
+
+### 3D Physics
+- Set gravity (default: -9.81)
+- Configure default material
+- Set solver iterations
+
+## Input Manager
+
+### Axes
+- Horizontal: A/D or Left/Right arrows
+- Vertical: W/S or Up/Down arrows
+- Mouse X: Mouse X axis
+- Mouse Y: Mouse Y axis
+- Fire1: Left mouse button or Left Ctrl
+- Fire2: Right mouse button or Left Alt
+- Fire3: Middle mouse button or Left Shift
+- Jump: Space
+- Submit: Enter or Space
+- Cancel: Escape
+
+### Mobile Input
+- Touch input for mobile platforms
+- Accelerometer for tilt controls
+- Gyroscope for advanced controls
+
+## Tags and Layers
+
+### Tags
+- Player
+- Enemy
+- Collectible
+- Obstacle
+- Ground
+- UI
+- MainCamera
+- GameController
+
+### Layers
+- Default (0)
+- TransparentFX (1)
+- Ignore Raycast (2)
+- Water (4)
+- UI (5)
+- Player (8)
+- Enemy (9)
+- Ground (10)
+- Collectible (11)
+- Obstacle (12)
+
+## Build Settings
+
+### Scenes
+- Add all scenes to build
+- Set proper scene order
+- Main menu first, then gameplay scenes
+
+### Platform Settings
+- Configure platform-specific settings
+- Set appropriate compression settings
+- Configure scripting define symbols
+
+### Development Build
+- Enable for debugging
+- Set development build options
+- Configure debugging features
+
+## XR Settings (if applicable)
+
+### XR Configuration
+- Enable XR if using VR/AR
+- Configure supported XR devices
+- Set XR SDK providers
+
+## Network Settings
+
+### Multiplayer
+- Configure network settings if using multiplayer
+- Set appropriate network transport
+- Configure matchmaking if needed
+
+## Audio Settings
+
+### Audio Configuration
+- Set audio configuration
+- Configure 3D audio settings
+- Set audio compression settings
+
+## Graphics Settings
+
+### Shader Stripping
+- Configure shader stripping for different platforms
+- Remove unused shaders for smaller builds
+
+### Lightmap Settings
+- Configure lightmap settings
+- Set appropriate lightmap resolution
+- Configure lightmap compression
+
+## Memory Settings
+
+### Memory Configuration
+- Set appropriate memory settings
+- Configure garbage collection
+- Set memory limits for different platforms
+
+## Platform-Specific Settings
+
+### PC (Windows/Mac/Linux)
+- Set appropriate resolution settings
+- Configure fullscreen options
+- Set windowed mode options
+
+### Mobile (iOS/Android)
+- Set appropriate resolution settings
+- Configure orientation settings
+- Set performance settings
+- Configure touch input
+
+### Console (PlayStation/Xbox/Nintendo Switch)
+- Set platform-specific settings
+- Configure controller input
+- Set performance settings
+- Configure platform-specific features
+
+## Optimization Recommendations
+
+### Performance
+- Use object pooling for frequently spawned objects
+- Implement LOD systems for 3D models
+- Use texture atlasing for 2D sprites
+- Optimize shaders for target platforms
+
+### Memory
+- Use texture compression
+- Implement asset streaming for large games
+- Use appropriate audio compression
+- Optimize mesh data
+
+### Build Size
+- Remove unused assets
+- Use appropriate compression settings
+- Optimize textures and audio
+- Use asset bundles for large games
+
+## Testing Settings
+
+### Debug Settings
+- Enable debug logging
+- Set appropriate log levels
+- Configure crash reporting
+- Set performance monitoring
+
+### Quality Assurance
+- Set up automated testing
+- Configure performance testing
+- Set up memory profiling
+- Configure build validation
+
+## Release Settings
+
+### Distribution
+- Configure platform-specific distribution
+- Set up code signing
+- Configure app store settings
+- Set up analytics and crash reporting
+
+### Updates
+- Set up update mechanisms
+- Configure version management
+- Set up hotfix capabilities
+- Configure A/B testing if needed
